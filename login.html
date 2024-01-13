@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />	
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
+<link rel="stylesheet" href="login.css" media="screen">
+<script>var nama = prompt("Selamat datang di CMOS, Silahkan masukkan nama Anda");
+var konfirmasi = confirm("Hallo " + nama + ", selamat datang di hotspot kami. Silahkan masukkan username dan password yang telah operator sediakan. Terimakasih");
+
+if (konfirmasi) {
+    // Logika untuk memproses username dan password
+    var username = prompt("Masukkan username:");
+    var password = prompt("Masukkan password:");
+
+    // Lakukan sesuatu dengan username dan password, misalnya validasi
+    // ...
+
+    // Tampilkan pesan terima kasih
+    alert("Terima kasih, " + nama + ". Selamat menggunakan layanan kami!");
+
+    // Tutup atau keluar dari program JavaScript
+    window.close();
+} else {
+    // Jika pengguna membatalkan, tampilkan pesan penolakan
+    alert("Terimakasih, " + nama + ". Anda membatalkan proses login.");
+}
+</script>
+</head>
+<body class='login' style="background-image: url('beg.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;">
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#section1">Tentang</a>
+  <a href="#section2">Layanan</a>
+  <a href="#section3">Kontak</a>
+
+</nav>
+
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<br><br><br>
+	  <h3 id="home">MUHAMMAD RIYADI ILHAM</h3> 
+	  <h4>XII TKJ 1</h4>
+	<script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+
+
+<form class="vertical-form" name="login" action="$(link-login-only)" method="post" background="#A03472"
+	$(if chap-id) onSubmit="return doLogin()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+<div style="margin:0;padding:50;display:inline"></div>
+
+<center>
+    <div id="head">
+    </div>
+    
+    
+<div id="box">
+    <div id="userdiv"> </div>
+    <div><input id="user" autocomplete="on" name="username" type="text" value="$(username)" placeholder="Username"/></div>
+    <div><input id="pass" autocomplete="off" name="password" type="password" label="false" placeholder="Password"/></div>
+    <div><input id="boton" name="submit" type="submit" value=" " /></div>
+
+<h1 style="color: #fff; text-align: center; font-weight: bold; text-shadow: 2px 2px 4px #000080;">SELAMAT DATANG DI HOSTPOT SEKOLAH ADDAWAH</h1>
+
+</div>
+</center>
+
+
+
+
+<div class='footer'>
+
+<br>
+<p>
+</p>
+</div>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="section1">
+  <h2>CMOS Merakyat</h2>
+  <p>Kami adalah CMOS yang berdiri dari 2018, perusahaan yang mengkhususkan diri dalam jasa perbaikan komputer dan pelayanan jaringan profesional serta terpercaya. Kami memahami betapa pentingnya membangun kepercayaan pelanggan, dan itulah mengapa kami berkomitmen untuk memberikan pelayanan berkualitas tinggi dengan servis cepat dan harga terjangkau.</p> <br>
+  <p>Dikerjakan oleh teknisi profesional yang terpercaya serta berpengalaman sehingga siap memberikan pelayanan terbaik dengan cepat dan hasil berkualitas dengan harga yang merakyat.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+<section id="section2">
+  <h2>Kami Melayani</h2>
+  <ul>
+    <li><img src="perakitan.jpg" alt="Service Computer"> Service Computer</li>
+    <li><img src="komputer.jpg" alt="Instalasi Computer"> Instalasi Computer</li>
+    <li><img src="jaringan.jpg" alt="Instalasi Jaringan"> Instalasi Jaringan</li>
+    <li><img src="printer.jpg" alt="Service Printer"> Service Printer</li>
+    <li><img src="pendidikan.jpg" alt="Pendidikan Computer"> Pendidikan Computer</li>
+  </ul>
+</section>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+<section id="section3">
+  <h2>Kontak</h2>
+  <img src="Logowa.png" alt="Gambar 1">
+  <img src="fb.png" alt="Gambar 2">
+  <img src="ig.png" alt="Gambar 3">
+</section>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+<script type="text/javascript">
+document.oncontextmenu = function(){return false;}
+</script>
+</body>
+</html>
